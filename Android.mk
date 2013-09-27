@@ -28,6 +28,11 @@ else
 LOCAL_CFLAGS += \
     -DONLY_C
 endif
+
+ifeq ($(TARGET_ARCH),x86)
+LOCAL_CFLAGS += -DLITTLE_ENDIAN
+endif
+
 LOCAL_CFLAGS+= -O2
 
 LOCAL_C_INCLUDES:= \
